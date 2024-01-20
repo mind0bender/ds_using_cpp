@@ -18,6 +18,7 @@ int main() {
         cout << arr[i] << " ";
     }
     cout << endl
+         << endl
          << "Name: Yash Gupta   UID: 23BCS11317" << endl;
 
     return 0;

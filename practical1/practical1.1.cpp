@@ -16,6 +16,7 @@ int main() {
     }
     float avg = sum / 5.0;
     cout << "average of marks: " << avg << endl;
-    cout << "Name: Yash Gupta   UID: 23BCS11317" << endl;
+    cout << endl
+         << "Name: Yash Gupta   UID: 23BCS11317" << endl;
     return 0;
 }

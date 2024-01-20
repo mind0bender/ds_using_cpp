@@ -9,6 +9,7 @@ int main() {
     cout << "Enter number of terms: ";
     cin >> nTerms;
     int f1 = 0, f2 = 1;
+    cout << "Fibonacci series: ";
     cout << f1 << ' ' << f2 << ' ';
     while (nTerms - 2) {
         int f3 = f1 + f2;
@@ -18,6 +19,7 @@ int main() {
         nTerms--;
     }
     cout << endl
+         << endl
          << "Name: Yash Gupta   UID: 23BCS11317" << endl;
     return 0;
 }
