@@ -1,3 +1,8 @@
+/*
+Create a class student w/ data members rollno, name, height, weight.
+by defining member functions getStudent() and display() outside the class using array of objects.
+*/
+
 #include <iostream>
 
 using namespace std;
@@ -40,6 +45,7 @@ int main() {
     }
     cout << endl;
     for (int i = 0; i < 2; i++) {
+        cout << "Data of student" << i + 1 << endl;
         section_401[i].display();
     }
     return 0;
