@@ -9,8 +9,10 @@ class Student {
 
    public:
     Student() {
-        uid = "N/A";
-        name = "N/A";
+        cout << "Enter UID: ";
+        cin >> uid;
+        cout << "Enter Name: ";
+        cin >> name;
     }
     Student(string uid, string name) : uid(uid), name(name) {
     }
@@ -39,10 +41,6 @@ class Academic : public Student {
     int sub3;
 
    public:
-    Academic(Student &student) {
-        uid = student.getUID();
-        name = student.getName();
-    }
     void setMarks() {
         cout << "Enter marks of subject 1: ";
         cin >> sub1;
@@ -51,7 +49,7 @@ class Academic : public Student {
         cout << "Enter marks of subject 3: ";
         cin >> sub3;
     }
-    void getPercentage() {
+    void showPercentage() {
         cout << "Percentage: " << (sub1 + sub2 + sub3) / 3.0 << endl;
     }
 };
@@ -62,10 +60,6 @@ class Accounts : public Student {
     int paid;
 
    public:
-    Accounts(Student &student) {
-        uid = student.getUID();
-        name = student.getName();
-    }
     void setFees(int totalFees) {
         fees = totalFees;
     }
@@ -80,18 +74,15 @@ class Accounts : public Student {
 };
 
 int main() {
-    Student salim;
-    Academic salimAcademic = Academic(salim);
-    Accounts salimAccounts = Accounts(salim);
+    Academic salimAcademic;
+    Accounts salimAccounts;
 
-    salim.setDetails();
     salimAcademic.setMarks();
     salimAccounts.setFees(12'00'000);
     salimAccounts.payFees(7'20'000);
 
-    salim.showDetails();
     salimAccounts.showFees();
-    salimAcademic.getPercentage();
+    salimAcademic.showPercentage();
 
     cout << "Name: Yash Gupta   UID: 23BCS11317" << endl;
 

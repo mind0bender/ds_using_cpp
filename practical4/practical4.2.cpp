@@ -1,4 +1,4 @@
-// WAP to implement the concept of multi level inheritance
+// WAP to implement the concept of multiple inheritance
 
 #include <iostream>
 

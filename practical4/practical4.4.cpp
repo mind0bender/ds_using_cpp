@@ -3,21 +3,16 @@
 using namespace std;
 
 class Student {
-   protected:
+   private:
     string uid;
     string name;
 
+   protected:
     void setDetails() {
         cout << "Enter UID: ";
         cin >> uid;
         cout << "Enter Name: ";
         cin >> name;
-    }
-    string getUID() {
-        return uid;
-    }
-    string getName() {
-        return name;
     }
     void showStudentDetails() {
         cout << "UID: " << uid << endl;
@@ -27,8 +22,6 @@ class Student {
    public:
     Student() {
         setDetails();
-    }
-    Student(string uid, string name) : uid(uid), name(name) {
     }
 };
 
