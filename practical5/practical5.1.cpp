@@ -93,6 +93,6 @@ int main() {
     cout << endl;
     result.showDetails();
     cout << endl
-         << "Name: Yash Gupta   UID: 23BCS11317" << endl;
+         << "Name: Yash\tUID: 23BCS11317" << endl;
     return 0;
 }
