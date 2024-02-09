@@ -14,5 +14,8 @@ using namespace greet;
 int main() {
     name = "Yash";
     hello();
+    cout << endl
+         << "Name: Yash\tUID: 23BCS11317" << endl;
+
     return 0;
 }
