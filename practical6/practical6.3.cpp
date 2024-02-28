@@ -32,3 +32,14 @@ int main() {
 
     return 0;
 }
+
+// algorithm
+
+// 1. Start
+// 2. Take input for length of array
+// 3. Take input for elements of array
+// 4. Take input for position to delete element
+// 5. Shift elements to the left from the given position
+// 6. Decrement the length of the array
+// 7. Print the array
+// 8. End

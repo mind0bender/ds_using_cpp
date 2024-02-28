@@ -35,3 +35,16 @@ int main() {
 
     return 0;
 }
+
+// algorithm
+
+// 1. Start
+// 2. Take input for length of array
+// 3. Take input for elements of array
+// 4. Take input for position to insert element
+// 5. Take input for element to insert
+// 6. Shift elements to the right from the given position
+// 7. Insert the element at the given position
+// 8. Increment the length of the array
+// 9. Print the array
+// 10. End
