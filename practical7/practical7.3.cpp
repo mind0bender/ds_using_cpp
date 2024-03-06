@@ -1,33 +1,44 @@
-// binary search
+// WAP to implement binary search
 
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    int n;
-    cout << "Enter length of array: ";
-    cin >> n;
-    int LA[n];
+  int n;
+  cout << "Enter number of elements: ";
+  cin >> n;
 
-    for (int i = 0; i < n; i++) {
-        cout << "Enter element " << i + 1 << ": ";
-        cin >> LA[i];
-    }
+  int LA[n];
+  cout << "Enter elements: ";
+  for (int i = 0; i < n; i++) {
+    cin >> LA[i];
+  }
 
-    int search;
-    cout << "Enter element to search: ";
-    cin >> search;
+  int ele;
+  cout << "Enter element to search: ";
+  cin >> ele;
 
-    int low = 0, high = n - 1, mid;
-    mid = (low + high) / 2;
-
-    if (LA[mid] == search) {
-        cout << "Element found at position " << mid + 1 << endl;
+  int l = 0, r = n - 1;
+  int idx = -1;
+  while (l <= r) {
+    int mid = (l + r) / 2;
+    if (LA[mid] == ele) {
+      idx = mid;
+      break;
+    } else if (LA[mid] < ele) {
+      l = mid + 1;
     } else {
-        cout << "Element not found" << endl;
+      r = mid - 1;
     }
-    cout << "Name: Yash Gupta   UID: 23BCS11317" << endl;
+  }
+  if (idx == -1) {
+    cout << "element not found" << endl;
+  } else {
+    cout << "element found at index " << idx << endl;
+  }
 
-    return 0;
+  cout << "Yash Gupta   23BCS11317";
+
+  return 0;
 }
