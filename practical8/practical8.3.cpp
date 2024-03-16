@@ -21,8 +21,6 @@ int main() {
         min = j;
       }
     }
-    cout << arr[min] << endl;
-
     int temp = arr[i];
     arr[i] = arr[min];
     arr[min] = temp;

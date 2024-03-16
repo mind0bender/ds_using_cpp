@@ -22,6 +22,10 @@ int main() {
   cout << " is " << sum(a, b) << endl;
 
   cout << "Yash Gupta\t23BCS11317" << endl;
+
+  free(a);
+  free(b);
+
   return 0;
 }
 
