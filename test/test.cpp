@@ -4,18 +4,9 @@
 using namespace std;
 
 int main() {
-    int size;
-    cout << "Enter size of array: ";
-    cin >> size;
-    int arr[size];
-    for (int i = 0; i < size; i++) {
-        cout << "Enter element " << i + 1 << ": ";
-        cin >> arr[i];
-    }
-    cout << "Array elements are: ";
-    for (int i = 0; i < size; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-    return 0;
+  char marks[] = {(char)1, (char)1, (char)3, (char)1, 7};
+  char name[] = {'F', 'a', 'h', 'a', 'd', 'u', 'l', 'l', 'a', 'h'};
+
+  cout << marks << endl;
+  return 0;
 }
