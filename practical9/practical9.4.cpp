@@ -28,3 +28,14 @@ int main() {
   cout << "Yash Gupta\t23BCS11317" << endl;
   return 0;
 }
+
+// int main() {
+//   ABC obj;
+//   obj.set();
+//   ABC* obj1 = &obj;
+//   cout << endl;
+//   obj1->display();
+
+//   cout << "Yash Gupta\t23BCS11317" << endl;
+//   return 0;
+// }
