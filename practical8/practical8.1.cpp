@@ -30,7 +30,7 @@ int main() {
     cout << LA[i] << " ";
   }
 
-  cout << endl << "Yash Gupta   23BCS11317" << endl;
+  cout << "Yash Gupta\t23BCS11317" << endl;
 
   return 0;
 }

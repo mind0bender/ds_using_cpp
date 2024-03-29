@@ -18,9 +18,8 @@ int main() {
   for (int i = 1; i < n; i++) {
     int unsortedElement = LA[i];
     int j = i - 1;
-    while (j >= 0 && LA[j] > unsortedElement) {
+    for (; j >= 0 && LA[j] > unsortedElement; j--) {
       LA[j + 1] = LA[j];
-      j--;
     }
     LA[j + 1] = unsortedElement;
   }
@@ -29,8 +28,8 @@ int main() {
   for (int i = 0; i < n; i++) {
     cout << LA[i] << " ";
   }
-
-  cout << endl << "Yash Gupta   23BCS11317" << endl;
+  cout << endl;
+  cout << "Yash Gupta\t23BCS11317" << endl;
 
   return 0;
 }
