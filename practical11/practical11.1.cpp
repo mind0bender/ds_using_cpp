@@ -20,9 +20,9 @@ class LinkedList {
     newNode->next = head;
     head = newNode;
   }
-  void deleteNode(int val) {
+  void deleteNode() {
     if (head == nullptr) {
-      cout << "Underflow" << endl;
+      cout << "Underflow!" << endl;
     } else {
       LinkedList* temp = head;
       head = temp->next;
@@ -30,6 +30,7 @@ class LinkedList {
     }
   }
   void display() {
+    cout << "Elements: ";
     LinkedList* temp = head;
     while (temp != nullptr) {
       cout << temp->data << ' ';
@@ -43,11 +44,38 @@ class LinkedList {
 
 int main() {
   LinkedList* head = new LinkedList;
-  head->create(10);
-  head->create(20);
-  head->create(30);
-  head->display();
-  head->deleteNode(20);
-  head->display();
+  while (true) {
+    cout << "0. Exit" << endl
+         << "1. Insert" << endl
+         << "2. Delete" << endl
+         << "3. Display" << endl
+         << ">>> ";
+    int c;
+    cin >> c;
+    bool exit = false;
+    switch (c) {
+      case 0:
+        exit = true;
+        break;
+      case 1:
+        int val;
+        cout << "Enter value: ";
+        cin >> val;
+        head->create(val);
+        break;
+      case 2:
+        head->deleteNode();
+        break;
+      case 3:
+        head->display();
+        break;
+      default:
+        cout << "Invalid Choice: " << c << endl;
+        break;
+    }
+    if (exit) {
+      break;
+    }
+  }
   return 0;
 }
