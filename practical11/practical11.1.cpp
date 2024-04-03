@@ -22,7 +22,7 @@ class LinkedList {
   }
   void deleteNode() {
     if (head == nullptr) {
-      cout << "Underflow!" << endl;
+      cout << "Underflow: List is empty" << endl;
     } else {
       LinkedList* temp = head;
       head = temp->next;
@@ -45,11 +45,10 @@ class LinkedList {
 int main() {
   LinkedList* head = new LinkedList;
   while (true) {
-    cout << "0. Exit" << endl
-         << "1. Insert" << endl
-         << "2. Delete" << endl
-         << "3. Display" << endl
+    cout << "0. Exit | " << "1. Insert | " << "2. Delete | " << "3. Display"
+         << endl
          << ">>> ";
+
     int c;
     cin >> c;
     bool exit = false;

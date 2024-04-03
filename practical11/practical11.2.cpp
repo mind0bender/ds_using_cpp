@@ -20,11 +20,11 @@ class LinkedList {
     if (head == nullptr) {
       head = temp;
     } else {
-      LinkedList* t = head;
-      while (t->next != nullptr) {
-        t = t->next;
+      LinkedList* last = head;
+      while (last->next != nullptr) {
+        last = last->next;
       }
-      t->next = temp;
+      last->next = temp;
     }
   }
   void deleteEnd() {
@@ -61,10 +61,8 @@ class LinkedList {
 int main() {
   LinkedList* head = new LinkedList;
   while (true) {
-    cout << "0. Exit" << endl
-         << "1. Insert" << endl
-         << "2. Delete" << endl
-         << "3. Display" << endl
+    cout << "0. Exit | " << "1. Insert | " << "2. Delete | " << "3. Display"
+         << endl
          << ">>> ";
     int c;
     cin >> c;
@@ -93,6 +91,8 @@ int main() {
       break;
     }
   }
+
+  cout << "Yash Gupta\t23BCS11317" << endl;
 
   return 0;
 }
