@@ -1,4 +1,4 @@
-// WAP to using linked list w/ following operations:
+// WAP to use linked list w/ following operations:
 /*                               \
     insert a node at begining    \
     delete a node at begining    \
@@ -11,21 +11,37 @@ using namespace std;
 
 class LinkedList {
  public:
-  LinkedList* head;
-  int data;
-  LinkedList* next;
+  LinkedList* head = nullptr;
+  int data = 0;
+  LinkedList* next = nullptr;
 
-  void create(int val) {
-    LinkedList* newNode = new LinkedList(val);
-    newNode->next = head;
-    head = newNode;
-  }
-  void deleteNode() {
+  void createEnd(int val) {
+    LinkedList* temp = new LinkedList(val);
     if (head == nullptr) {
-      cout << "Underflow!" << endl;
+      head = temp;
+    } else {
+      LinkedList* t = head;
+      while (t->next != nullptr) {
+        t = t->next;
+      }
+      t->next = temp;
+    }
+  }
+  void deleteEnd() {
+    if (head == nullptr) {
+      cout << "Underflow: List is empty" << endl;
     } else {
       LinkedList* temp = head;
-      head = temp->next;
+      LinkedList* prev = nullptr;
+      while (temp->next != nullptr) {
+        prev = temp;
+        temp = temp->next;
+      }
+      if (prev == nullptr) {
+        head = nullptr;
+      } else {
+        prev->next = nullptr;
+      }
       delete temp;
     }
   }
@@ -61,10 +77,10 @@ int main() {
         int val;
         cout << "Enter value: ";
         cin >> val;
-        head->create(val);
+        head->createEnd(val);
         break;
       case 2:
-        head->deleteNode();
+        head->deleteEnd();
         break;
       case 3:
         head->display();
@@ -77,8 +93,6 @@ int main() {
       break;
     }
   }
-
-  cout << "Yash Gupta\t23BCS11317" << endl;
 
   return 0;
 }
