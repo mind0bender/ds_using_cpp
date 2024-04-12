@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# the first argument is the file number, like 11.1
-# and the filename should be constructed using this file number 
-
-
-
-
 filename="./practical$1.cpp"
 
 if [ -z $filename ]; then

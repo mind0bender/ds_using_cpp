@@ -1,7 +1,7 @@
 // WAP to use linked list w/ following operations:
 /*                               \
-    insert a node at begining    \
-    delete a node at begining    \
+    insert a node at end    \
+    delete a node at end    \
     display all elements of a LL \
 */
 

@@ -1,5 +1,10 @@
 /*
 Stack
+wap to perform following operations on a stack
+insert
+delete
+display top element
+display status of stack
 
 switch-case:
     case 1: insert(push)
@@ -32,7 +37,7 @@ class Stack {
       cout << "Element Deleted" << endl;
     }
   }
-  void display() { cout << arr[top] << endl; }
+  void peek() { cout << arr[top] << endl; }
   void status() {
     switch (top) {
       case -1:
@@ -57,6 +62,7 @@ int main() {
          << endl;
     cin >> cmd;
     if (cmd == 5) {
+      cout << "Exiting" << endl;
       break;
     }
     switch (cmd) {
@@ -73,7 +79,7 @@ int main() {
         lol.status();
         break;
       case 4:
-        lol.display();
+        lol.peek();
         break;
       default:
         cout << "Invalid choice" << endl;
