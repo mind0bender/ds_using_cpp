@@ -10,6 +10,9 @@ int main() {
   cout << exp << endl;
   while (exp[i] != '\0') {
     char c = exp[i];
+    // isalnum() is a function that checks if the character is an alphabet or a
+    // number
+    // if (isalnum(c)) {
     if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') ||
         (c >= 'a' && c <= 'z')) {
       cout << c;
