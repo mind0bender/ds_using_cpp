@@ -49,6 +49,7 @@ int main() {
   char exp[20];
   cout << "Enter the expression: ";
   cin >> exp;
+  cout << "Postfix: ";
 
   int i = 0;
   while (exp[i] != '\0') {
@@ -56,7 +57,7 @@ int main() {
     if (isalnum(c)) {
       cout << c;
     } else {
-      while (top != -1 && priority(stack[top]) > priority(c)) {
+      while (top != -1 && priority(stack[top]) >= priority(c)) {
         cout << deleteEle();
       }
       insertEle(c);
@@ -68,13 +69,3 @@ int main() {
 
   return 0;
 }
-
-/*
-class Stack
-  arr[max]
-  front -1
-  rear  -1
-  insertEle(ele)
-  deleteEle()
-  displayEle()
-*/

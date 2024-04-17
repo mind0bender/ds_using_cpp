@@ -12,7 +12,7 @@ class Queue
 
 using namespace std;
 
-const int maxSize = 20;
+const int maxSize = 5;
 
 class Queue {
  public:
@@ -57,11 +57,10 @@ class Queue {
 int main() {
   Queue q;
   bool exit = false;
+  cout << "0. Exit | " << "1. Insert | " << "2. Delete | " << "3. Display"
+       << endl;
   while (!exit) {
-    cout << "0. Exit | " << "1. Insert | " << "2. Delete | " << "3. Display"
-         << endl
-         << ">>> ";
-
+    cout << ">>> ";
     int c;
     cin >> c;
     switch (c) {
