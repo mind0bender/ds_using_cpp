@@ -14,12 +14,13 @@ int top = -1;
 
 void insertElement(char c);
 char deleteElement();
+void display();
 
 int main() {
   insertElement('a');
   insertElement('b');
   deleteElement();
-  for (int i = 0; i <= top; i++) cout << stack[i] << endl;
+  display();
   return 0;
 }
 
@@ -40,4 +41,8 @@ char deleteElement() {
     top--;
     return stack[top + 1];
   }
+}
+
+void display() {
+  for (int i = 0; i <= top; i++) cout << stack[i] << endl;
 }
