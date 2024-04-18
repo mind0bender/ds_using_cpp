@@ -55,11 +55,12 @@ class Stack {
 
 int main() {
   Stack lol;
+  cout << "1. insert\t|\t2. delete\t|\t3. status\t|\t"
+          "4. display\t|\t5. exit"
+       << endl;
   while (true) {
+    cout << ">>>";
     int cmd;
-    cout << "\tcase 1: insert\t|\tcase 2: delete\t|\tcase 3: status\t|\tcase "
-            "4: display\t|\tcase 5: exit"
-         << endl;
     cin >> cmd;
     if (cmd == 5) {
       cout << "Exiting" << endl;
@@ -88,3 +89,33 @@ int main() {
   }
   return 0;
 }
+
+/*
+pseudo code for
+    if (top != maxSize - 1) {
+      top++;
+      arr[top] = ele;
+      cout << "Element Inserted" << endl;
+    }
+  }
+  void pop() {
+    if (top != -1) {
+      top--;
+      cout << "Element Deleted" << endl;
+    }
+  }
+  void peek() { cout << arr[top] << endl; }
+  void status() {
+    switch (top) {
+      case -1:
+        cout << "Stack is Empty" << endl;
+        break;
+      case maxSize - 1:
+        cout << "Stack is Full" << endl;
+        break;
+      default:
+        cout << "Stack is Something..." << top << endl;
+        break;
+    }
+  }
+*/

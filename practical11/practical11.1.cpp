@@ -43,11 +43,11 @@ class LinkedList {
 };
 
 int main() {
-  LinkedList* head = new LinkedList;
+  LinkedList* head = new LinkedList();
+  cout << "0. Exit | " << "1. Insert | " << "2. Delete | " << "3. Display"
+       << endl;
   while (true) {
-    cout << "0. Exit | " << "1. Insert | " << "2. Delete | " << "3. Display"
-         << endl
-         << ">>> ";
+    cout << ">>> ";
 
     int c;
     cin >> c;
@@ -81,3 +81,22 @@ int main() {
 
   return 0;
 }
+
+/*
+pseudo code for insert at the beginning of the linked list:
+  create newNode with the given value
+  set newNode->next = head
+  set the head = newNode
+pseudo code for deleting at the beginning of the linked list:
+  if head == nullptr
+      write "Underflow"
+  else
+    LinkedList* temp = head;
+    head = temp->next;
+    delete temp;
+pseudocode for displaying all elements in a linked list:
+  set temp=head
+  repeat step  while temp!=null
+    write temp->data
+    set temp = temp->next
+*/

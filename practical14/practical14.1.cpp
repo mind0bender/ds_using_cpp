@@ -69,3 +69,8 @@ int main() {
 
   return 0;
 }
+
+/*
+write pseudocode for converting an infix expression to postfix expression
+
+*/
