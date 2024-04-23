@@ -12,17 +12,17 @@ class Queue
 
 using namespace std;
 
-const int maxSize = 5;
+const int maxSize = 10;
 
 class Queue {
  public:
-  int arr[maxSize];
+  char arr[maxSize];
   int front, rear;
   Queue() {
     front = -1;
     rear = -1;
   }
-  void enqueue(int ele) {
+  void enqueue(char ele) {
     if (rear == maxSize - 1) {
       cout << "Overflow!" << ele << endl;
     } else {
@@ -48,42 +48,31 @@ class Queue {
   void displayEle() {
     cout << "Queue elements are: ";
     for (int i = front; i <= rear; i++) {
-      cout << arr[i] << ' ';
+      cout << arr[i];
     }
     cout << endl;
+  }
+  int search(char ele) {
+    for (int i = front; i < rear + 1; i++) {
+      if (ele == arr[i]) {
+        cout << "Element found at index " << i << endl;
+        return i;
+      }
+    }
+    return -1;
   }
 };
 
 int main() {
   Queue q;
-  bool exit = false;
-  cout << "0. Exit | " << "1. Insert | " << "2. Delete | " << "3. Display"
-       << endl;
-  while (!exit) {
-    cout << ">>> ";
-    int c;
-    cin >> c;
-    switch (c) {
-      case 0:
-        exit = true;
-        break;
-      case 1:
-        int val;
-        cout << "Enter value: ";
-        cin >> val;
-        q.enqueue(val);
-        break;
-      case 2:
-        q.dequeue();
-        break;
-      case 3:
-        q.displayEle();
-        break;
-      default:
-        cout << "Invalid Choice: " << c << endl;
-        break;
-    }
-  }
+  q.enqueue('y');
+  q.enqueue('a');
+  q.enqueue('s');
+  q.enqueue('h');
+
+  q.search('s');
+
+  q.displayEle();
   cout << "Yash Gupta\t23BCS11317" << endl;
   return 0;
 }
