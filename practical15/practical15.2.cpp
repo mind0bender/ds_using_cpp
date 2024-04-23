@@ -59,18 +59,26 @@ class Queue {
         return i;
       }
     }
+    cout << "Element not found" << endl;
     return -1;
   }
 };
 
 int main() {
   Queue q;
-  q.enqueue('y');
-  q.enqueue('a');
-  q.enqueue('s');
-  q.enqueue('h');
 
-  q.search('s');
+  string name;
+  cout << "Enter name: ";
+  cin >> name;
+
+  for (int i = 0; i < name.size(); i++) {
+    q.enqueue(name[i]);
+  }
+
+  cout << "Enter search character: ";
+  char search;
+  cin >> search;
+  q.search(search);
 
   q.displayEle();
   cout << "Yash Gupta\t23BCS11317" << endl;
